@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://wf2cmn1kdwax"]
+
+[ext_resource type="PackedScene" uid="uid://wxx64jbn473s" path="res://sprite_2d.tscn" id="1_mehp4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_mehp4")]
+
+[node name="Timer" type="Timer" parent="Sprite2D"]
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 444.0
+offset_top = 509.0
+offset_right = 644.0
+offset_bottom = 573.0
+text = "Mover"
+
+[node name="ButtonLeft" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 519.0
+offset_right = 163.0
+offset_bottom = 562.0
+scale = Vector2(0.943354, 1.27828)
+text = "Left"
+
+[node name="ButtonRight" type="Button" parent="."]
+offset_left = 174.0
+offset_top = 519.0
+offset_right = 303.0
+offset_bottom = 562.0
+scale = Vector2(0.943354, 1.27828)
+text = "Right
+"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
+[connection signal="button_down" from="ButtonLeft" to="Sprite2D" method="_on_button_left_button_down"]
+[connection signal="button_up" from="ButtonLeft" to="Sprite2D" method="_on_button_left_button_up"]
+[connection signal="button_down" from="ButtonRight" to="Sprite2D" method="_on_button_right_button_down"]

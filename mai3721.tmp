@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://wf2cmn1kdwax"]
+
+[ext_resource type="PackedScene" uid="uid://wxx64jbn473s" path="res://sprite_2d.tscn" id="1_mehp4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_mehp4")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 444.0
+offset_top = 509.0
+offset_right = 644.0
+offset_bottom = 573.0
+text = "Mover"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
